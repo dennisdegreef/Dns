@@ -26,6 +26,11 @@ class CnameTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($this->type->isSatisfiedBy(''));
     }
 
+    public function test_type_is_valid_with_only_at_sign_and_no_dot()
+    {
+        $this->assertTrue($this->type->isSatisfiedBy('@'));
+    }
+
     public function test_type_is_not_valid_without_trailing_dot()
     {
         $this->assertFalse($this->type->isSatisfiedBy('foo'));
