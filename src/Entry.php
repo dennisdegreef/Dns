@@ -28,6 +28,10 @@ final class Entry
 
     private function __construct($name, Type $type, $expiry, $content)
     {
+        if($name < 1 || $name > 63) {
+            throw new \Exception("Name '{$name}' should be between 1 and 63 characters");
+        }
+
         $this->name = $name;
         $this->type = $type;
         $this->expiry = $expiry;
