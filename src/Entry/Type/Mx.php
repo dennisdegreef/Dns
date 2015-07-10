@@ -6,7 +6,7 @@ use Link0\Dns\Entry;
 use Link0\Dns\Entry\Type;
 
 /**
- * Cname type
+ * Mx type
  *
  * @package Link0\Dns\Entry\Type
  */
